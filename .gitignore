@@ -1,0 +1,11 @@
+__pycache__
+.history
+.hypothesis/
+build/
+dist/
+reports/
+.venv/
+env/
+.vscode/
+node_modules/
+yarn-error.log
