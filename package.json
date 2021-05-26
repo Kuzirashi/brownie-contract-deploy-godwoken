@@ -14,8 +14,11 @@
     "prebuild": "rm -rf ./dist",
     "build": "tsc",
     "postbuild": "copyfiles -u 1 \"src/**/*.d.ts\" dist",
+    "deploy:ganache": "brownie run scripts/deploy --network ganache",
     "deploy:godwoken": "brownie run scripts/deploy --network godwokendev",
-    "brownie:godwoken:add": "brownie networks add Godwoken-Dev godwokendev host=http://localhost:8024 chainid=0x3"
+    "brownie:godwoken:add": "brownie networks add Godwoken-Dev godwokendev host=http://localhost:8024 chainid=0x3",
+    "brownie:ganache:add": "brownie networks add Ganache-Dev ganache host=http://localhost:8545 chainid=0x539",
+    "start:ganache": "ganache-cli -m 'chalk park staff buzz chair purchase wise oak receive avoid avoid home' -l 8000000 -e 1000000 -a 20 -g 0 --chainId 1337"
   },
   "dependencies": {
     "@typechain/ethers-v5": "^6.0.5",
